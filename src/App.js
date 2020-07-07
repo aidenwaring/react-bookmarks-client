@@ -2,9 +2,11 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>
-      The basic empty template
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/bookmarks" component={Bookmarks} />
+      <Route component={NoMatch} />
+    </Switch>
   )
 }
 
